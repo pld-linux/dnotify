@@ -1,14 +1,14 @@
 Summary:	Execute a command when the contents of a directory change
 Summary(pl):	Wykonywanie poleceñ po zmianie zawarto¶ci katalogu
 Name:		dnotify
-Version:	0.17.1
+Version:	0.17.2
 Release:	1
 Epoch:		1
 License:	GPL
 Vendor:		Oskar Liljeblad <oskar@osk.mine.nu>
 Group:		Applications/File
 Source0:	http://www.student.lu.se/~nbi98oli/src/%{name}-%{version}.tar.gz
-# Source0-md5:	000ace6d46018a24502c31408268a9a6
+# Source0-md5:	cf380e1bebb81baf6366d19ab52b4fe8
 URL:		http://www.student.lu.se/~nbi98oli/dnotify.html
 BuildRequires:	autoconf
 BuildRequires:	automake
