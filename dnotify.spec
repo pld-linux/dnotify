@@ -1,14 +1,14 @@
 Summary:	Execute a command when the contents of a directory change
 Summary(pl):	Wykonywanie poleceñ po zmianie zawarto¶ci katalogu
 Name:		dnotify
-Version:	0.14.0
+Version:	0.16.0
 Release:	1
 Epoch:		1
 License:	GPL
 Vendor:		Oskar Liljeblad <oskar@osk.mine.nu>
 Group:		Applications/File
 Source0:	http://www.student.lu.se/~nbi98oli/src/%{name}-%{version}.tar.gz
-# Source0-md5:	8abc2b49853a50edd75999953fcd4d24
+# Source0-md5:	95d5f111d90a77256e0ba4b2052ba2bc
 URL:		http://www.student.lu.se/~nbi98oli/dnotify.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -48,10 +48,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README AUTHORS NEWS TODO
 %attr(755,root,root) %{_bindir}/*
