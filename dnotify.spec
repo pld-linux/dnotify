@@ -1,49 +1,42 @@
-%define package @PACKAGE@
-%define version @VERSION@
-%define prefix /usr
-%define release 1
-
-Summary:   Execute a command when the contents of a directory change
-Name:      %{package}
-Version:   %{version}
-Release:   %{release}
-Serial:    1
-Copyright: GPL
-Group:     Applications/File
-Vendor:    Oskar Liljeblad <oskar@osk.mine.nu>
-URL:       http://www.student.lu.se/~nbi98oli/dnotify.html
-Source:    %{package}-%{version}.tar.gz
-BuildRoot: %{_tmppath}/%{name}-%{version}-root
+Summary:	Execute a command when the contents of a directory change
+Name:		dnotify
+Version:	0.12.0
+Release:	1
+Epoch:		1
+License:	GPL
+Vendor:		Oskar Liljeblad <oskar@osk.mine.nu>
+Group:		Applications/File
+Source0:	http://www.student.lu.se/~nbi98oli/src/%{name}-%{version}.tar.gz
+URL:		http://www.student.lu.se/~nbi98oli/dnotify.html
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-dnotify is a simple program that makes it possible to execute a command
-every time the contents of a specific directory change in linux. It is run
-from the command line and takes two arguments: one or more directories to
-monitor and a command to execute whenever a directory has changed. Options
-control what events to trigger on: when a file was read in the directory,
-when one was created, deleted and so on.
+dnotify is a simple program that makes it possible to execute a
+command every time the contents of a specific directory change in
+linux. It is run from the command line and takes two arguments: one or
+more directories to monitor and a command to execute whenever a
+directory has changed. Options control what events to trigger on: when
+a file was read in the directory, when one was created, deleted and so
+on.
 
 %prep
 %setup -q
 
 %build
-export CFLAGS="${RPM_OPT_FLAGS}" CPPFLAGS="${RPM_OPT_FLAGS}";
-./configure --prefix=%{prefix};
-make;
+%configure
+%{__make}
 
 %install
-rm -rf %{buildroot}
-mkdir -p %{buildroot}
-make prefix=%{buildroot}%{prefix} \
-	mandir=$RPM_BUILD_ROOT%{_mandir} \
-	sysconfdir=%{buildroot}/etc \
-	install
+rm -rf $RPM_BUILD_ROOT
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
-%doc README AUTHORS COPYING NEWS TODO
+%defattr(644,root,root,755)
+%doc README AUTHORS NEWS TODO
+%attr(755,root,root) %{_bindir}/*
 %{_mandir}/*/*
-%{_bindir}/*
