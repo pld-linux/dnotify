@@ -8,6 +8,7 @@ License:	GPL
 Vendor:		Oskar Liljeblad <oskar@osk.mine.nu>
 Group:		Applications/File
 Source0:	http://www.student.lu.se/~nbi98oli/src/%{name}-%{version}.tar.gz
+# Source0-md5:	f36bc19f8660fe24fc98009f005d5cc6
 URL:		http://www.student.lu.se/~nbi98oli/dnotify.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
