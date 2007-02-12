@@ -1,5 +1,5 @@
 Summary:	Execute a command when the contents of a directory change
-Summary(pl.UTF-8):   Wykonywanie poleceń po zmianie zawartości katalogu
+Summary(pl.UTF-8):	Wykonywanie poleceń po zmianie zawartości katalogu
 Name:		dnotify
 Version:	0.18.0
 Release:	1
