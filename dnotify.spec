@@ -1,5 +1,5 @@
 Summary:	Execute a command when the contents of a directory change
-Summary(pl):	Wykonywanie poleceñ po zmianie zawarto¶ci katalogu
+Summary(pl.UTF-8):   Wykonywanie poleceÅ„ po zmianie zawartoÅ›ci katalogu
 Name:		dnotify
 Version:	0.18.0
 Release:	1
@@ -24,14 +24,14 @@ directory has changed. Options control what events to trigger on: when
 a file was read in the directory, when one was created, deleted and so
 on.
 
-%description -l pl
-dnotify to prosty program, który umo¿liwia wykonanie polecenia za
-ka¿dym razem, kiedy zawarto¶æ danego katalogu pod Linuksem ulegnie
-zmianie. Program jest uruchamiany z linii poleceñ i przyjmuje dwa
-parametry: jeden lub wiêcej katalogów do monitorowania oraz polecenie
-do wykonania po ka¿dej zmianie zawarto¶ci katalogu. Opcje kontroluj±,
-jakie zdarzenia maj± spowodowaæ uruchomienie polecenia: kiedy w
-katalogu jaki¶ plik by³ czytany, zosta³ utworzony lub usuniêty itp.
+%description -l pl.UTF-8
+dnotify to prosty program, ktÃ³ry umoÅ¼liwia wykonanie polecenia za
+kaÅ¼dym razem, kiedy zawartoÅ›Ä‡ danego katalogu pod Linuksem ulegnie
+zmianie. Program jest uruchamiany z linii poleceÅ„ i przyjmuje dwa
+parametry: jeden lub wiÄ™cej katalogÃ³w do monitorowania oraz polecenie
+do wykonania po kaÅ¼dej zmianie zawartoÅ›ci katalogu. Opcje kontrolujÄ…,
+jakie zdarzenia majÄ… spowodowaÄ‡ uruchomienie polecenia: kiedy w
+katalogu jakiÅ› plik byÅ‚ czytany, zostaÅ‚ utworzony lub usuniÄ™ty itp.
 
 %prep
 %setup -q
