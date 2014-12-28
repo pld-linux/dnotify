@@ -12,7 +12,7 @@ Source0:	http://www.student.lu.se/~nbi98oli/src/%{name}-%{version}.tar.gz
 URL:		http://www.student.lu.se/~nbi98oli/dnotify.html
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
